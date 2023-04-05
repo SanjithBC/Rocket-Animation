@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+    background-image: url("space.jpg");
+}
+
+#earth {
+    float: left;
+    margin-top: 32%;
+    width: 20%;
+    -webkit-animation: rotate 120s infinite;
+    animation-timing-function: linear;
+    position: relative;
+    z-index: 1;
+}
+
+#moon {
+    float: right;
+    width: 15%;
+    -webkit-animation: rotate 120s infinite;
+    animation-timing-function: linear;
+    position: relative;
+    z-index: 1;
+}
+
+#rocket {
+    height: 15%;
+    position: absolute;
+    margin-left: -14%;
+    margin-top: 26%;
+    z-index: 2;
+    -webkit-animation: blastoff 15s 3;
+}
+
+@keyframes blastoff {
+    10% {margin-top: 1%;}
+    20% { transform: rotate(45deg);}
+    60% { margin-left: 65.5%; margin-top: 4%;}
+    70% { height: 5%;}
+    80% { transform: rotate(-90deg);}
+}
+
+@keyframes rotate {
+    100% {transform: rotate(360deg)}
+}
+
+@keyframes shootingstar {
+    100% { margin-left: -5%; margin-top: 10%;}
+}
